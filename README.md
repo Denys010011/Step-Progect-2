@@ -3,6 +3,6 @@
 2. Дубік Галина;
 3. Коломієць Наталія. 
 
-1. студент верстав шапку сайту з верхнім меню.
-2. студент верстав блок Revolutionary Editor, People Are Talking About Fork та налаштування збірки проекту за допомогою Gulp. 
-3. студент верстав секцію Here is what you get та Fork Subscription Pricing.
+1 студент верстав шапку сайту з верхнім меню.
+2 студент верстав блок Revolutionary Editor, People Are Talking About Fork та налаштування збірки проекту за допомогою Gulp. 
+3 студент верстав секцію Here is what you get та Fork Subscription Pricing.
