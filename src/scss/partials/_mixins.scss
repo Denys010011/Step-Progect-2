@@ -1,1 +1,33 @@
+@mixin flex ($direction, $jc, $ai) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin  mediaMax($width) {
+  @media (max-width: $width){
+    @content;
+  }
+}
+
+@mixin min-width($breakpoint) {
+  @if ($breakpoint==medium) {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  }@else if ($breakpoint==medium-large) {
+    @media (min-width: $breakpoint-medium-large) {
+      @content;
+    }
+  }@else if ($breakpoint==large) {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  }
+  @else{
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+
+}
+
 
