@@ -1,0 +1,17 @@
+.container {
+
+}
+.revolutionary {
+    margin-top: 66px;
+}
+.editor {
+    &__title {
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 28px;
+        color: $text-color;
+        text-transform: uppercase;
+    }
+}
+

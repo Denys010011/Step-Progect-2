@@ -1,0 +1,11 @@
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/mixins";
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+@import "./section/style";
