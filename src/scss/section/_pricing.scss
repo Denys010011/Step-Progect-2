@@ -1,0 +1,148 @@
+.pricing-cards {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+
+}
+.subscription-pricing {
+  padding: 14px 0;
+  background: url("../image/prising-cards/Layer.png");
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+.pricing-card {
+  color: #FFFFFF;
+  background-color: $purple-card;
+  width: 257px;
+  text-align: center;
+  min-height: 470px;
+  &--large {
+    width: 299px;
+
+    & .pricing-card {
+      &__price {
+        font-size: 82px;
+        line-height: 84px;
+        margin-bottom: 16px;
+      }
+
+
+      &__title {
+        padding: 43px 0;
+        margin-bottom: 14px;
+      }
+      &__interval:after {
+        margin: 46px auto 40px;
+      }
+      &__list {
+        margin-bottom: 83px;
+      }
+      &__button {
+        padding: 18px 48px;
+        margin-bottom: 47px;
+      }
+    }}
+
+  &__title {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 36px 0;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    font-size: 60px;
+    line-height: 62px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__interval {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+
+  }
+
+  &__interval:after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: #8D81AC;
+    display: block;
+    margin: 38px auto 30px;
+
+
+  }
+
+  &__button {
+    padding: 15px 38px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    border: none;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+
+  }
+}
+
+.card-list {
+  margin-bottom: 37px;
+
+  &__item {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+  }
+
+  &__item:last-child {
+    margin: 0;
+  }
+
+}
+@include min-width(medium) {
+
+  .subscription-pricing {
+    padding: 88px 0 97px;
+    &__title {
+      margin-bottom: 39px;
+
+    }
+
+
+  }}
+@include min-width(medium-large) {
+  .pricing-cards {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+
+  }
+  .pricing-card:nth-child(2n){
+    justify-self: flex-start;
+  }.pricing-card:nth-child(2n+1){
+     justify-self: flex-end;
+   }
+  .pricing-card:last-child{
+    align-self: center;
+  }
+}
+@include min-width(large) {
+  .subscription-pricing {
+    padding-top: 112px;
+    &__title {
+      margin-bottom: 62px;
+    }
+  }
+  .pricing-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
