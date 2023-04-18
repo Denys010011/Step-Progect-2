@@ -2,7 +2,7 @@
 image: Forkio
 pages:
   script:
-    - dist
+    - gulp build
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
