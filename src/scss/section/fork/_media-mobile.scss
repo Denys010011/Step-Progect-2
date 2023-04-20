@@ -1,0 +1,133 @@
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .header-wrapper {
+        justify-content: space-between;
+        padding-top: 10px;
+
+        &__buttons-burger{
+            display: block;
+            background-color:#27262A;
+            border: 0px solid #27262A;
+        }
+        &__burger-list{
+            list-style: none;
+            padding-left : 0px;
+        }
+        
+        &__button-container{
+            position: absolute;
+            left:35%;
+        }
+
+        &__mobile-burger{
+            position: absolute;
+            z-index: 50;
+            background-color:  #333333;
+            margin-top: 65px;
+            width: 250px;
+            transform: translate(-90%, 0%);
+            display: none;
+        }
+        &__elem{
+            width: 5px;
+            height: 30px;
+            background-color:  #333333;
+            margin-right: 30px;
+        }
+        &__mob-item{
+            display: flex;
+            padding-top: 30px ;
+            
+            justify-content: flex-start;
+            
+           
+        }
+        &__link-mob{
+            text-decoration: none;
+            color:white;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        &__link-mob:active{
+            color: #8D81AC;
+            
+
+        }
+        
+        &__link-mob:focus{
+            color: #8D81AC;
+        }
+        &__close{
+            display: none;
+        }
+        &__menu {
+            display: none;
+        }
+
+        &__logo {
+            padding-left: 5px;
+        }
+
+        &__menu-and-button {
+            padding-right: 5px;
+        }
+
+        &__text-logo {
+            display: none;
+        }
+    }
+
+    header {
+        background-color: #27262A;
+        height: 75px;
+    }
+
+    .section-header {
+        height: 550px;
+
+        &__text-1 {
+            padding-top: 80px;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        &__text-2 {
+            text-align: center;
+            color: #8D81AC;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        &__text-3 {
+            text-align: center;
+            color: #848E97;
+            font-size: 14px;
+            font-weight: 400px;
+        }
+
+        &__btn {
+            color: white;
+            font-weight: 700;
+            font-size: 10px;
+            padding: 6px 20px 6px 20px;
+            border: 1px solid #8D81AC;
+            border-radius: 40px;
+            background-color: #8D81AC;
+        }
+
+        &__button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 220px);
+        }
+    }
+
+    .paragraph {
+        font-size: 10px;
+    }
+
+    
+}

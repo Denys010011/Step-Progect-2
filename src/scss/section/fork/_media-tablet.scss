@@ -1,0 +1,86 @@
+@media screen and (min-width:481px) and (max-width:992px){
+    .header-wrapper{
+        &__buttons-burger{
+            display: none;
+        }
+        &__menu{
+            display: none;
+        }
+        &__logo {
+            padding-left: 5px;
+        }
+    
+        &__menu-and-button {
+           padding-right: 5px;
+        }
+        &__mobile-burger{
+            display: none;
+        }
+    }
+    header{
+        background-color: #27262A;
+        height: 105px;
+    }
+    .header-m{
+        display: none;
+    }
+    .header-wrapper-tablet{
+        display: block;
+        &__menu{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__menu:last-child{
+                padding-right: 70px;
+        }
+        &__menu:first-child{
+            padding-left: 70px;
+        }
+        &__link{
+            text-decoration: none;
+            color: #8D81AC;
+            font-weight: 700;
+            font-size: 16px;
+            padding-top: 18px ;
+        }
+        
+    }
+    .section-header{
+        height: 550px;
+        &__text-1{
+            padding-top: 80px;
+            text-align: center;
+            color:white;
+            font-weight: 700;
+            font-size: 72px;
+        }
+        &__text-2{
+            text-align: center;
+            color :  #8D81AC;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        &__text-3{
+            text-align: center;
+            color : #848E97;
+            font-size: 14px;
+            font-weight: 400px;
+          
+        }
+        &__btn {
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 7px 30px 7px 30px;
+            border: 1px solid #8D81AC;
+            border-radius: 40px;
+            background-color: #8D81AC;
+        }
+        &__button-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 246px);
+        }
+    }
+}
