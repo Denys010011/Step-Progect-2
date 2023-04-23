@@ -4,3 +4,7 @@ image: .gitlab-ci.yml
 before_script:
   - gulp build
   - gulp dev
+artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
