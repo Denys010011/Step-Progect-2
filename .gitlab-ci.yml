@@ -1,14 +1,12 @@
 # The Docker image that will be used to build your app
-image: node:lts
+image: .gitlab-ci.yml
 # Functions that should be executed before the build script is run
 before_script:
-  - npm ci
+  - npm run dev
+  - npm run build
 pages:
   script:
-    - npm run build
-    - npm run dev
-    - mkdir -p public
-    - cp -a dist/* public/ 
+    - dist
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
