@@ -1,5 +1,5 @@
 # The Docker image that will be used to build your app
-image: .gitlab-ci.yml
+image: node:lts
 # Functions that should be executed before the build script is run
 before_script:
   - npm run dev
