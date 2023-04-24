@@ -6,6 +6,8 @@ before_script:
 pages:
   script:
     - npm run build
+    - mkdir -p public
+    - cp -a dist/* public/ 
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
