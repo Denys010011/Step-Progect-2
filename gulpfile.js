@@ -4,20 +4,18 @@ const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify");
 const minifyjs = require("gulp-js-minify");
 const cleanCSS = require("gulp-clean-css");
-const clean = require('gulp-clean');
+const clean = require("gulp-clean");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 const autoprefixer = require("gulp-autoprefixer");
-
 
 function html(done) {
   gulp.src("index.html").pipe(gulp.dest("dist")).on("end", done);
 }
 
-
 const path = {
   src: {
-    scss: './src/scss/**/*.scss',
+    scss: "./src/scss/**/*.scss",
     js: "./src/js/*.js",
     img: "./src/image/**/*",
   },
@@ -32,10 +30,10 @@ const path = {
 
 const distScss = () => {
   gulp
-  .src(path.src.scss)
-  .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest(path.dist.css))
-}
+    .src(path.src.scss)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest(path.dist.css));
+};
 const buildScss = () =>
   gulp
     .src(path.src.scss)
@@ -60,17 +58,15 @@ const buildJs = () =>
     .pipe(browserSync.stream());
 
 const buildImg = () =>
-  gulp.src(path.src.img)
-  .pipe(imagemin())
-  .pipe(gulp.dest(path.dist.img));
+  gulp.src(path.src.img).pipe(imagemin()).pipe(gulp.dest(path.dist.img));
 
 const watcher = () => {
   browserSync.init({
     server: {
       baseDir: "./",
     },
-    browser: 'chrome',
-    notify: false
+    browser: "chrome",
+    notify: false,
   });
 
   gulp.watch("./index.html").on("change", browserSync.reload);
@@ -85,4 +81,4 @@ const watcher = () => {
 // );
 
 gulp.task("dev", gulp.series(watcher));
-gulp.task("build", gulp.parallel(html, buildImg, buildScss, buildJs, watcher));
+gulp.task("build", gulp.parallel(html, buildImg, buildScss, buildJs));
