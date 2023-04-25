@@ -9,6 +9,12 @@ const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 const autoprefixer = require("gulp-autoprefixer");
 
+
+function html(done) {
+  gulp.src("index.html").pipe(gulp.dest("dist")).on("end", done);
+}
+
+
 const path = {
   src: {
     scss: './src/scss/**/*.scss',
@@ -16,6 +22,7 @@ const path = {
     img: "./src/image/**/*",
   },
   dist: {
+    html: "dist",
     self: "dist/",
     css: "./dist/css/",
     js: "./dist/js/",
@@ -78,4 +85,4 @@ const watcher = () => {
 // );
 
 gulp.task("dev", gulp.series(watcher));
-gulp.task("build", gulp.parallel(buildImg, buildScss, buildJs));
+gulp.task("build", gulp.parallel(html, buildImg, buildScss, buildJs, watcher));
